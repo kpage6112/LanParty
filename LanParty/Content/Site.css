@@ -5,18 +5,24 @@ body {
     background-color: #17221E;
     color: #1Fa06C;
 }
-/*.navbar-header a {
-    color: #284D3E;
+.strawpoll {
+    width: 680px;
+    height: 342px;
+    border: 1px solid red;
 }
-navbar navbar-inverse navbar-fixed-top {
+.container a {
+    color: #284D3E;
+    align-content:center;
+}
+.navbar navbar-inverse navbar-fixed-top {
     background-color: #17221E;
     color: #1Fa06C;
 }
 
-nav navbar-nav {
+.nav navbar-nav {
     background-color: #17221E;
     color: #1Fa06C;
-}*/
+}
 
 a:hover {
     background-color: #09D482;

@@ -200,7 +200,9 @@
     <Compile Include="Models\GameOwned.cs" />
     <Compile Include="Models\Games.cs" />
     <Compile Include="Models\Itinerary.cs" />
+    <Compile Include="Models\ItineraryItem.cs" />
     <Compile Include="Models\LanParty.cs" />
+    <Compile Include="Models\LanPartyContext.cs" />
     <Compile Include="Models\Members.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />

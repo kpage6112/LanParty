@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,7 +8,8 @@ namespace LanParty.Models
 {
     public class Games
     {
-        public int GameId { get; set; }
+        [Key]
+        public int ID { get; set; }
         public string GameName { get; set; }
         public string Type { get; set; }
         public int MinPlayers { get; set; }
