@@ -10,7 +10,7 @@ using LanParty.Models;
 
 namespace LanParty.Controllers
 {
-    public class LanPartiesController : Controller
+    public class LanPartyController : Controller
     {
         private LanPartyContext db = new LanPartyContext();
 
@@ -27,7 +27,7 @@ namespace LanParty.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            LanParty lanParty = db.LanParty.Find(id);
+            LanParty.Models.LanParty lanParty = db.LanParty.Find(id);
             if (lanParty == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Date,StartTime,EndTime,Location")] LanParty lanParty)
+        public ActionResult Create([Bind(Include = "ID,Date,StartTime,EndTime,Location")] LanParty.Models.LanParty lanParty)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace LanParty.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            LanParty lanParty = db.LanParty.Find(id);
+            LanParty.Models.LanParty lanParty = db.LanParty.Find(id);
             if (lanParty == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Date,StartTime,EndTime,Location")] LanParty lanParty)
+        public ActionResult Edit([Bind(Include = "ID,Date,StartTime,EndTime,Location")] LanParty.Models.LanParty lanParty)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace LanParty.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            LanParty lanParty = db.LanParty.Find(id);
+            LanParty.Models.LanParty lanParty = db.LanParty.Find(id);
             if (lanParty == null)
             {
                 return HttpNotFound();
@@ -109,7 +109,7 @@ namespace LanParty.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            LanParty lanParty = db.LanParty.Find(id);
+            LanParty.Models.LanParty lanParty = db.LanParty.Find(id);
             db.LanParty.Remove(lanParty);
             db.SaveChanges();
             return RedirectToAction("Index");

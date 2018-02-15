@@ -196,7 +196,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItineraryController.cs" />
     <Compile Include="Controllers\ItineraryItemsController.cs" />
-    <Compile Include="Controllers\LanPartiesController.cs" />
+    <Compile Include="Controllers\LanPartyController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Global.asax.cs">

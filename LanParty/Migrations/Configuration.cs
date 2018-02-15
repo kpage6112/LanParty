@@ -27,20 +27,94 @@ namespace LanParty.Migrations
             //    );
             //
 
-        //    [Key]
-        //public int ID { get; set; }
-        //public DateTime Date { get; set; }
-        //public DateTime StartTime { get; set; }
-        //public DateTime EndTime { get; set; }
-        //public string Location { get; set; }
+            //public int MemberID { get; set; }
+            //public int LanPartyID { get; set; }
+            //public DateTime ArrivalTime { get; set; }
+            //public bool HasPaid { get; set; }
 
 
-        context.LanParty.AddOrUpdate(new LanParty.Models.LanParty{
-            Date = new DateTime(2018, 02, 12),
-            StartTime = new DateTime(2018, 02, 12, 10, 00, 00),
-            EndTime = new DateTime(2018, 02, 13, 04, 00, 00),
-            Location = "Somewhere"
+        context.LanParty.AddOrUpdate(new LanParty.Models.LanParty
+            {
+                Date = new DateTime(2017, 12, 16),
+                StartTime = new DateTime(2017, 12, 16, 10, 00, 00),
+                EndTime = new DateTime(2017, 12, 17, 03, 00, 00),
+                Location = "Sylrei's House"
+            });
+        context.LanParty.AddOrUpdate(new LanParty.Models.LanParty
+            {
+                Date = new DateTime(2018, 03, 17),
+                StartTime = new DateTime(2018, 03, 17, 10, 00, 00),
+                EndTime = new DateTime(2018, 03, 18, 03, 00, 00),
+                Location = "Sylrei's House"
+            });
+        context.Members.AddOrUpdate(new Models.Members
+            {
+                UserName = "Sylrei",
+                FirstName = "Kristen",
+                LastName = "McIntosh",
+                Email = "sylrei@testing.com",
+                Phone = "(502)533-0567"
+
+            });
+        context.Members.AddOrUpdate(new Models.Members
+            {
+                UserName = "thundat00th",
+                FirstName = "Reed",
+                LastName = "McIntosh",
+                Email = "thundat00th@testing.com",
+                Phone = "(334)521-3004"
+
+            });
+        context.Members.AddOrUpdate(new Models.Members
+           {
+                UserName = "Zarch",
+                FirstName = "Donnie",
+                LastName = "Podhorsky",
+                Email = "Zarch@testing.com",
+                Phone = "(202)867-5309"
+
+            });
+            context.Members.AddOrUpdate(new Models.Members
+            {
+                UserName = "Kletus",
+                FirstName = "Kyle",
+                LastName = "",
+                Email = "Kletus@testing.com",
+                Phone = "(212)660-2242"
+
+            });
+            context.Attendance.AddOrUpdate(new Models.Attendance
+            {
+                MemberID = 1,
+                LanPartyID =2,
+                ArrivalTime = new DateTime(2018, 03, 17, 10, 00, 00),
+                HasPaid = true
+
         });
+        context.Attendance.AddOrUpdate(new Models.Attendance
+            {
+                MemberID = 2,
+                LanPartyID = 2,
+                ArrivalTime = new DateTime(2018, 03, 17, 10, 00, 00),
+                HasPaid = true
+
+            });
+            context.Attendance.AddOrUpdate(new Models.Attendance
+            {
+                MemberID = 3,
+                LanPartyID = 2,
+                ArrivalTime = new DateTime(2018, 03, 17, 09, 30, 00),
+                HasPaid = false
+
+            });
+        context.Attendance.AddOrUpdate(new Models.Attendance
+            {
+                MemberID = 4,
+                LanPartyID = 2,
+                ArrivalTime = new DateTime(2018, 03, 17, 11, 00, 00),
+                HasPaid = false
+
+            });
         }
     }
 }
