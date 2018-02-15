@@ -1,0 +1,34 @@
+﻿@model LanParty.Models.GameOwned
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GameOwned</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Games.GameName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Games.GameName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Members.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Members.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

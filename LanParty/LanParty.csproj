@@ -190,11 +190,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\GameOwnedsController.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItineraryController.cs" />
+    <Compile Include="Controllers\ItineraryItemsController.cs" />
+    <Compile Include="Controllers\LanPartiesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802150133425_Initial.cs" />
+    <Compile Include="Migrations\201802150133425_Initial.Designer.cs">
+      <DependentUpon>201802150133425_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\GameOwned.cs" />
@@ -266,6 +278,41 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Attendances\Create.cshtml" />
+    <Content Include="Views\Attendances\Delete.cshtml" />
+    <Content Include="Views\Attendances\Details.cshtml" />
+    <Content Include="Views\Attendances\Edit.cshtml" />
+    <Content Include="Views\Attendances\Index.cshtml" />
+    <Content Include="Views\Members\Create.cshtml" />
+    <Content Include="Views\Members\Delete.cshtml" />
+    <Content Include="Views\Members\Details.cshtml" />
+    <Content Include="Views\Members\Edit.cshtml" />
+    <Content Include="Views\Members\Index.cshtml" />
+    <Content Include="Views\Itineraries\Create.cshtml" />
+    <Content Include="Views\Itineraries\Delete.cshtml" />
+    <Content Include="Views\Itineraries\Details.cshtml" />
+    <Content Include="Views\Itineraries\Edit.cshtml" />
+    <Content Include="Views\Itineraries\Index.cshtml" />
+    <Content Include="Views\ItineraryItems\Create.cshtml" />
+    <Content Include="Views\ItineraryItems\Delete.cshtml" />
+    <Content Include="Views\ItineraryItems\Details.cshtml" />
+    <Content Include="Views\ItineraryItems\Edit.cshtml" />
+    <Content Include="Views\ItineraryItems\Index.cshtml" />
+    <Content Include="Views\LanParties\Create.cshtml" />
+    <Content Include="Views\LanParties\Delete.cshtml" />
+    <Content Include="Views\LanParties\Details.cshtml" />
+    <Content Include="Views\LanParties\Edit.cshtml" />
+    <Content Include="Views\LanParties\Index.cshtml" />
+    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Games\Delete.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
+    <Content Include="Views\Games\Edit.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
+    <Content Include="Views\GameOwneds\Create.cshtml" />
+    <Content Include="Views\GameOwneds\Delete.cshtml" />
+    <Content Include="Views\GameOwneds\Details.cshtml" />
+    <Content Include="Views\GameOwneds\Edit.cshtml" />
+    <Content Include="Views\GameOwneds\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +329,11 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802150133425_Initial.resx">
+      <DependentUpon>201802150133425_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
