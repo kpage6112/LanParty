@@ -3,31 +3,38 @@
 }
 
 <div class="jumbotron">
-    <div>
+    <div class="logo">
         <h1>LANPP</h1>
-        <p class="lead">Local Area Network Party Planner</p>
+        <p>Local Area Network Party Planner</p>
     </div>
-    <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                </ul>
-                
-            </div>
-        </div>
-    <div class="strawpoll">@*<iframe src="http://www.strawpoll.me/embed_1/14957212">Loading poll...</iframe>*@</div>
-
+    @*<div class="strawpoll"><iframe src="http://www.strawpoll.me/embed_1/14957212">Loading poll...</iframe></div>*@
+    
+   
 </div>
+@*<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Members", "Index", "Members")</li>
+            <li>@Html.ActionLink("Games", "Index", "Games")</li>
+            <li>@Html.ActionLink("LanParty", "Index", "LanParties")</li>
+            <li>@Html.ActionLink("Itinerary", "Index", "Itineraries")</li>
+            <li>@Html.ActionLink("ItineraryItems", "Index", "ItineraryItems")</li>
+            <li>@Html.ActionLink("GameOwned", "Index", "GameOwned")</li>
+            <li>@Html.ActionLink("Attendance", "Index", "Attendances")</li>
+            <li></li>
+        </ul>
+
+    </div>
+</div>*@
 
 <div class="row">
     <div class="col-md-12">

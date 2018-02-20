@@ -308,11 +308,11 @@
     <Content Include="Views\Games\Details.cshtml" />
     <Content Include="Views\Games\Edit.cshtml" />
     <Content Include="Views\Games\Index.cshtml" />
-    <Content Include="Views\GameOwneds\Create.cshtml" />
-    <Content Include="Views\GameOwneds\Delete.cshtml" />
-    <Content Include="Views\GameOwneds\Details.cshtml" />
-    <Content Include="Views\GameOwneds\Edit.cshtml" />
-    <Content Include="Views\GameOwneds\Index.cshtml" />
+    <Content Include="Views\GameOwned\Create.cshtml" />
+    <Content Include="Views\GameOwned\Delete.cshtml" />
+    <Content Include="Views\GameOwned\Details.cshtml" />
+    <Content Include="Views\GameOwned\Edit.cshtml" />
+    <Content Include="Views\GameOwned\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
