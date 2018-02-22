@@ -20,18 +20,18 @@
                     @Html.ActionLink("LANPP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
             <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
                 <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
                     <li>@Html.ActionLink("Members", "Index", "Members")</li>
                     <li>@Html.ActionLink("Games", "Index", "Games")</li>
-                    <li>@Html.ActionLink("LanParty", "Index", "LanParties")</li>
-                    <li>@Html.ActionLink("Itinerary", "Index", "Itineraries")</li>
+                    <li>@Html.ActionLink("LanParty", "Index", "LanParty")</li>
+                    <li>@Html.ActionLink("Itinerary", "Index", "Itinerary")</li>
                     <li>@Html.ActionLink("ItineraryItems", "Index", "ItineraryItems")</li>
                     <li>@Html.ActionLink("GameOwned", "Index", "GameOwned")</li>
                     <li>@Html.ActionLink("Attendance", "Index", "Attendances")</li>
                     <li></li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+
             </div>
             
          </div>

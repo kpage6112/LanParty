@@ -86,12 +86,12 @@ namespace LanParty.Migrations
             context.Attendance.AddOrUpdate(new Models.Attendance
             {
                 MemberID = 1,
-                LanPartyID =2,
+                LanPartyID = 2,
                 ArrivalTime = new DateTime(2018, 03, 17, 10, 00, 00),
                 HasPaid = true
 
-        });
-        context.Attendance.AddOrUpdate(new Models.Attendance
+            });
+            context.Attendance.AddOrUpdate(new Models.Attendance
             {
                 MemberID = 2,
                 LanPartyID = 2,
@@ -107,7 +107,7 @@ namespace LanParty.Migrations
                 HasPaid = false
 
             });
-        context.Attendance.AddOrUpdate(new Models.Attendance
+            context.Attendance.AddOrUpdate(new Models.Attendance
             {
                 MemberID = 4,
                 LanPartyID = 2,

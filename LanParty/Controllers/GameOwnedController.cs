@@ -10,7 +10,7 @@ using LanParty.Models;
 
 namespace LanParty.Controllers
 {
-    public class GameOwnedsController : Controller
+    public class GameOwnedController : Controller
     {
         private LanPartyContext db = new LanPartyContext();
 
