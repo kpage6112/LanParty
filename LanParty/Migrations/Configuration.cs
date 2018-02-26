@@ -27,11 +27,8 @@ namespace LanParty.Migrations
             //    );
             //
 
-            //public int MemberID { get; set; }
-            //public int LanPartyID { get; set; }
-            //public DateTime ArrivalTime { get; set; }
-            //public bool HasPaid { get; set; }
-
+          
+            // After adding LanParty and Members table data un comment Attendance section
 
         context.LanParty.AddOrUpdate(new LanParty.Models.LanParty
             {
@@ -78,43 +75,45 @@ namespace LanParty.Migrations
             {
                 UserName = "Kletus",
                 FirstName = "Kyle",
-                LastName = "",
+                LastName = "Petruska",
                 Email = "Kletus@testing.com",
                 Phone = "(212)660-2242"
 
             });
-            context.Attendance.AddOrUpdate(new Models.Attendance
-            {
-                MemberID = 1,
-                LanPartyID = 2,
-                ArrivalTime = new DateTime(2018, 03, 17, 10, 00, 00),
-                HasPaid = true
 
-            });
-            context.Attendance.AddOrUpdate(new Models.Attendance
-            {
-                MemberID = 2,
-                LanPartyID = 2,
-                ArrivalTime = new DateTime(2018, 03, 17, 10, 00, 00),
-                HasPaid = true
+            // Add After seed data for members and LanParty is entered
+            //context.Attendance.AddOrUpdate(new Models.Attendance
+            //{
+            //    MemberID = 1,
+            //    LanPartyID = 2,
+            //    ArrivalTime = new DateTime(2018, 03, 17, 10, 00, 00),
+            //    HasPaid = true
 
-            });
-            context.Attendance.AddOrUpdate(new Models.Attendance
-            {
-                MemberID = 3,
-                LanPartyID = 2,
-                ArrivalTime = new DateTime(2018, 03, 17, 09, 30, 00),
-                HasPaid = false
+            //});
+            //context.Attendance.AddOrUpdate(new Models.Attendance
+            //{
+            //    MemberID = 2,
+            //    LanPartyID = 2,
+            //    ArrivalTime = new DateTime(2018, 03, 17, 10, 00, 00),
+            //    HasPaid = true
 
-            });
-            context.Attendance.AddOrUpdate(new Models.Attendance
-            {
-                MemberID = 4,
-                LanPartyID = 2,
-                ArrivalTime = new DateTime(2018, 03, 17, 11, 00, 00),
-                HasPaid = false
+            //});
+            //context.Attendance.AddOrUpdate(new Models.Attendance
+            //{
+            //    MemberID = 3,
+            //    LanPartyID = 2,
+            //    ArrivalTime = new DateTime(2018, 03, 17, 09, 30, 00),
+            //    HasPaid = false
 
-            });
+            //});
+            //context.Attendance.AddOrUpdate(new Models.Attendance
+            //{
+            //    MemberID = 4,
+            //    LanPartyID = 2,
+            //    ArrivalTime = new DateTime(2018, 03, 17, 11, 00, 00),
+            //    HasPaid = false
+
+            //});
         }
     }
 }
