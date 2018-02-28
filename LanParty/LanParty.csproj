@@ -214,6 +214,14 @@
     <Compile Include="Migrations\201802220014359_Attendances.Designer.cs">
       <DependentUpon>201802220014359_Attendances.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802282336380_AllowNulls.cs" />
+    <Compile Include="Migrations\201802282336380_AllowNulls.Designer.cs">
+      <DependentUpon>201802282336380_AllowNulls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802282347412_AllowNulls1.cs" />
+    <Compile Include="Migrations\201802282347412_AllowNulls1.Designer.cs">
+      <DependentUpon>201802282347412_AllowNulls1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Attendance.cs" />
@@ -347,6 +355,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802220014359_Attendances.resx">
       <DependentUpon>201802220014359_Attendances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802282336380_AllowNulls.resx">
+      <DependentUpon>201802282336380_AllowNulls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802282347412_AllowNulls1.resx">
+      <DependentUpon>201802282347412_AllowNulls1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

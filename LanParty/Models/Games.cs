@@ -13,11 +13,11 @@ namespace LanParty.Models
         public string GameName { get; set; }
         public string Type { get; set; }
         public int MinPlayers { get; set; }
-        public int MaxPlayers { get; set; }
+        public int? MaxPlayers { get; set; }
         public int EstimatedPlayTime { get; set; }
-        public bool IsCOOP { get; set; }
-        public bool HostedPrivateServer { get; set; }
-        public bool CrossPlatform { get; set; }
+        public bool? IsCOOP { get; set; }
+        public bool? HostedPrivateServer { get; set; }
+        public bool? CrossPlatform { get; set; }
         
     }
 }
