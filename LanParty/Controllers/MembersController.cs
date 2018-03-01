@@ -15,12 +15,14 @@ namespace LanParty.Controllers
         private LanPartyContext db = new LanPartyContext();
 
         // GET: Members
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.Members.ToList());
         }
 
         // GET: Members/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +38,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Members/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -46,6 +49,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "ID,UserName,FirstName,LastName,Email,Phone")] Members members)
         {
             if (ModelState.IsValid)
@@ -59,6 +63,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Members/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +83,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "ID,UserName,FirstName,LastName,Email,Phone")] Members members)
         {
             if (ModelState.IsValid)
@@ -90,6 +96,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Members/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)

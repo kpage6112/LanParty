@@ -37,6 +37,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Attendances/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.LanPartyID = new SelectList(db.LanParty, "ID", "Location");
@@ -49,6 +50,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "MemberID,LanPartyID,ArrivalTime,HasPaid")] Attendance attendance)
         {
             if (ModelState.IsValid)
@@ -64,6 +66,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Attendances/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,6 +88,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "MemberID,LanPartyID,ArrivalTime,HasPaid")] Attendance attendance)
         {
             if (ModelState.IsValid)
@@ -99,6 +103,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Attendances/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)

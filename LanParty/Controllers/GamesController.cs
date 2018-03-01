@@ -36,6 +36,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Games/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +60,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Games/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +80,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "ID,GameName,Type,MinPlayers,MaxPlayers,EstimatedPlayTime,IsCOOP,HostedPrivateServer,CrossPlatform")] Games games)
         {
             if (ModelState.IsValid)
@@ -90,6 +93,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Games/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)

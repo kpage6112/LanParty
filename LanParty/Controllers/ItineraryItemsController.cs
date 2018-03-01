@@ -37,6 +37,7 @@ namespace LanParty.Controllers
         }
 
         // GET: ItineraryItems/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.GameID = new SelectList(db.Games, "ID", "GameName");
@@ -49,6 +50,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "ID,ItineraryID,StartTime,EndTime,Activity,GameID")] ItineraryItem itineraryItem)
         {
             if (ModelState.IsValid)
@@ -64,6 +66,7 @@ namespace LanParty.Controllers
         }
 
         // GET: ItineraryItems/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,6 +88,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "ID,ItineraryID,StartTime,EndTime,Activity,GameID")] ItineraryItem itineraryItem)
         {
             if (ModelState.IsValid)
@@ -99,6 +103,7 @@ namespace LanParty.Controllers
         }
 
         // GET: ItineraryItems/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,6 +121,7 @@ namespace LanParty.Controllers
         // POST: ItineraryItems/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        
         public ActionResult DeleteConfirmed(int id)
         {
             ItineraryItem itineraryItem = db.ItineraryItems.Find(id);

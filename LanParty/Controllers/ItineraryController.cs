@@ -37,6 +37,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Itineraries/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.LanPartyID = new SelectList(db.LanParty, "ID", "Location");
@@ -48,6 +49,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "ID,LanPartyID")] Itinerary itinerary)
         {
             if (ModelState.IsValid)
@@ -62,6 +64,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Itineraries/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +85,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "ID,LanPartyID")] Itinerary itinerary)
         {
             if (ModelState.IsValid)
@@ -95,6 +99,7 @@ namespace LanParty.Controllers
         }
 
         // GET: Itineraries/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
