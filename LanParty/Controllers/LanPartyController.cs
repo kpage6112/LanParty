@@ -37,7 +37,7 @@ namespace LanParty.Controllers
         }
 
         // GET: LanParties/Create
-        [Authorize]
+        
         public ActionResult Create()
         {
             return View();
@@ -48,7 +48,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        
         public ActionResult Create([Bind(Include = "ID,Date,StartTime,EndTime,Location")] LanParty.Models.LanParty lanParty)
         {
             if (ModelState.IsValid)
@@ -62,7 +62,7 @@ namespace LanParty.Controllers
         }
 
         // GET: LanParties/Edit/5
-        [Authorize]
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,7 +82,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        
         public ActionResult Edit([Bind(Include = "ID,Date,StartTime,EndTime,Location")] LanParty.Models.LanParty lanParty)
         {
             if (ModelState.IsValid)
@@ -95,7 +95,7 @@ namespace LanParty.Controllers
         }
 
         // GET: LanParties/Delete/5
-        [Authorize]
+        
         public ActionResult Delete(int? id)
         {
             if (id == null)

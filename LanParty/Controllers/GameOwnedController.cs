@@ -37,7 +37,7 @@ namespace LanParty.Controllers
         }
 
         // GET: GameOwneds/Create
-        [Authorize]
+        
         public ActionResult Create()
         {
             ViewBag.GameID = new SelectList(db.Games, "ID", "GameName");
@@ -66,7 +66,7 @@ namespace LanParty.Controllers
         }
 
         // GET: GameOwneds/Edit/5
-        [Authorize]
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -88,7 +88,7 @@ namespace LanParty.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        
         public ActionResult Edit([Bind(Include = "GameID,MemberID")] GameOwned gameOwned)
         {
             if (ModelState.IsValid)
@@ -103,7 +103,7 @@ namespace LanParty.Controllers
         }
 
         // GET: GameOwneds/Delete/5
-        [Authorize]
+        
         public ActionResult Delete(int? id)
         {
             if (id == null)
